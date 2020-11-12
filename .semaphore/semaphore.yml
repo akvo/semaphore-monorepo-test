@@ -30,7 +30,7 @@ blocks:
               else
                 export TRAVIS_PULL_REQUEST="false"
               fi
-            - ./monorepo-build.sh
+            - ./monorepo-build-semaphore.sh
       env_vars:
         - name: CLOUDSDK_CORE_DISABLE_PROMPTS
           value: '1'
