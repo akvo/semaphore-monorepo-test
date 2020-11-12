@@ -30,10 +30,8 @@ while read -r line; do
     if [[ -f "${line}/ci/build.sh" ]]; then
         echo "Building ${line}"
         pushd "${line}"
-        ./ci/build.sh
         if [[ -f "ci/deploy.sh" ]]; then
             echo "Deploying ${line}"
-            ./ci/deploy.sh
         fi
         popd
     fi
